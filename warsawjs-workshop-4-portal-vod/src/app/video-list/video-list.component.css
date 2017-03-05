@@ -1,0 +1,20 @@
+li {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  border: 1px solid grey;
+}
+
+li span {
+  display: block;
+  width: 95%;
+  text-align: center;
+  background-color: grey;
+  padding: 10px;
+}
+
+video {
+  display: block;
+  width: 100%;
+}
+

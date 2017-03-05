@@ -1,0 +1,9 @@
+<div *ngIf='video'
+     class="wrapper">
+  <span>{{ video.name}}</span>
+  <!--zamiast src = "{{}}", [src]="" -> doda url, dopiero, gdy będą dane z angulara (interpolacja)-->
+  <video controls
+         [poster]="video.thumb"
+         [src]="video.url">
+  </video>
+</div>
