@@ -1,3 +1,5 @@
+import {Ng2PaginationModule} from 'ng2-pagination'
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -26,7 +28,8 @@ import { LatestVideoListComponent } from './latest-video-list/latest-video-list.
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2PaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
