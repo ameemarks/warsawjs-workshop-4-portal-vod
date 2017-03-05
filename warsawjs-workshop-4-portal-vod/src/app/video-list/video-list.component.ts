@@ -1,24 +1,29 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {LatestVideoService} from "./latest-video.service";
+import {SortingService} from './sorting.service'
 
 @Component({
   selector: 'app-video-list',
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.css'],
   providers: [
-    LatestVideoService
+    SortingService
   ]
 })
 export class VideoListComponent implements OnInit {
   @Input() videos: any[] = [];
 
-  constructor(private latestVideoService: LatestVideoService) { }
+  constructor(private sortingService: SortingService) { }
 
   ngOnInit() {
-    this.latestVideoService.getVideos()
-      .then((VIDEOS) => {
-        this.videos = VIDEOS;
-      })
+  }
+
+  sortAscending () {
+    this.videos = this.videos.sort(this.sortingService.ascending)
+  }
+
+  sortDesceding () {
+    this.videos = this.videos.sort(this.sortingService.descending)
   }
 
 }
